@@ -46,19 +46,29 @@ export const useWebsocket = <T = unknown>(callback: (data: T) => void, path: str
     let ws: WebSocket | null = null;
     let connection: signalR.HubConnection | null = null;
 
-    onMounted(() => {
+    onMounted(async () => {
         if (isProduction) {
-            connection = new signalR.HubConnectionBuilder()
-                .withUrl('/api')
-                .withAutomaticReconnect()
-                .build();
-            connection.on('newMessage', (message: T) => {
-                callback(message);
-            });
+            try {
+                const negotiationResponse = await $fetch<{ url: string, accessToken: string }>('/api/negotiate', {
+                    method: 'POST'
+                });
+                connection = new signalR.HubConnectionBuilder()
+                    .withUrl(negotiationResponse.url, {
+                        accessTokenFactory: () => negotiationResponse.accessToken
+                    })
+                    .withAutomaticReconnect()
+                    .build();
 
-            connection.start()
-                .then(() => console.log('Forbundet til Azure SignalR!'))
-                .catch(err => console.error('SignalR Forbindelsesfejl:', err));
+                connection.on('newMessage', (message: T) => {
+                    callback(message);
+                });
+
+                await connection.start();
+                console.log('Forbundet til Azure SignalR (manuelt)!');
+
+            } catch (err) {
+                console.error('Fejl under manuel SignalR-forbindelse:', err);
+            }
         } else {
             const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
             ws = new WebSocket(`${protocol}://${window.location.host}/api/${path}`);
