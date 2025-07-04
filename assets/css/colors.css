@@ -1,0 +1,62 @@
+.color-primary {
+    --color-base: var(--color-primary);
+    --color-contrast: var(--color-primary-contrast);
+    --color-shade: var(--color-primary-shade);
+    --color-tint: var(--color-primary-tint);
+}
+
+.color-secondary {
+    --color-base: var(--color-secondary);
+    --color-contrast: var(--color-secondary-contrast);
+    --color-shade: var(--color-secondary-shade);
+    --color-tint: var(--color-secondary-tint);
+}
+
+.color-tertiary {
+    --color-base: var(--color-tertiary);
+    --color-contrast: var(--color-tertiary-contrast);
+    --color-shade: var(--color-tertiary-shade);
+    --color-tint: var(--color-tertiary-tint);
+}
+
+.color-success {
+    --color-base: var(--color-success);
+    --color-contrast: var(--color-success-contrast);
+    --color-shade: var(--color-success-shade);
+    --color-tint: var(--color-success-tint);
+}
+
+.color-warning {
+    --color-base: var(--color-warning);
+    --color-contrast: var(--color-warning-contrast);
+    --color-shade: var(--color-warning-shade);
+    --color-tint: var(--color-warning-tint);
+}
+
+.color-danger {
+    --color-base: var(--color-danger);
+    --color-contrast: var(--color-danger-contrast);
+    --color-shade: var(--color-danger-shade);
+    --color-tint: var(--color-danger-tint);
+}
+
+.color-light {
+    --color-base: var(--color-light);
+    --color-contrast: var(--color-light-contrast);
+    --color-shade: var(--color-light-shade);
+    --color-tint: var(--color-light-tint);
+}
+
+.color-medium {
+    --color-base: var(--color-medium);
+    --color-contrast: var(--color-medium-contrast);
+    --color-shade: var(--color-medium-shade);
+    --color-tint: var(--color-medium-tint);
+}
+
+.color-dark {
+    --color-base: var(--color-dark);
+    --color-contrast: var(--color-dark-contrast);
+    --color-shade: var(--color-dark-shade);
+    --color-tint: var(--color-dark-tint);
+}

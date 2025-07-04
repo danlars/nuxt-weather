@@ -1,0 +1,1 @@
+export type colorNameType = keyof typeof colorClassConst;

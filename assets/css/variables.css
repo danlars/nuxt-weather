@@ -1,0 +1,63 @@
+:root {
+    /* Generel */
+    --app-radius: var(--radius-md);
+    --app-background-color: var(--color-slate-100);
+
+    /* Button */
+    --btn-border-radius: var(--app-radius);
+    --btn-padding-top: calc(var(--spacing) * 1);
+    --btn-padding-bottom: calc(var(--spacing) * 1);
+    --btn-padding-start: calc(var(--spacing) * 2);
+    --btn-padding-end: calc(var(--spacing) * 2);
+    --btn-border-width: calc(var(--spacing) * .5);
+    --btn-font-size: var(--text-base);
+
+    --btn-color: var(--color-primary-contrast);
+    --btn-background-color: var(--color-primary);
+    --btn-border-color: var(--color-primary);
+
+    --btn-focus-color: var(--color-primary-contrast);
+    --btn-focus-background-color: var(--color-primary-shade);
+    --btn-focus-border-color: var(--color-primary-shade);
+
+    --btn-hover-color: var(--color-primary-contrast);
+    --btn-hover-background-color: var(--color-primary-tint);
+    --btn-hover-border-color: var(--color-primary-tint);
+
+    --btn-lg-border-radius: var(--app-radius);
+    --btn-lg-padding-top: calc(var(--spacing) * 1.5);
+    --btn-lg-padding-bottom: calc(var(--spacing) * 1.5);
+    --btn-lg-padding-start: calc(var(--spacing) * 2.5);
+    --btn-lg-padding-end: calc(var(--spacing) * 2.5);
+    --btn-lg-border-width: calc(var(--spacing) * .75);
+    --btn-lg-font-size: var(--text-xl);
+
+    --btn-sm-border-radius: var(--app-radius);
+    --btn-sm-padding-top: calc(var(--spacing) * .5);
+    --btn-sm-padding-bottom: calc(var(--spacing) * .5);
+    --btn-sm-padding-start: calc(var(--spacing) * 1);
+    --btn-sm-padding-end: calc(var(--spacing) * 1);
+    --btn-sm-border-width: calc(var(--spacing) * .25);
+    --btn-sm-font-size: var(--text-sm);
+
+    /* Header */
+    --header-min-height: 70px;
+    --header-background-color: var(--color-primary);
+    --header-color: var(--color-primary-contrast);
+
+    /* Content */
+    --content-padding-top: calc(var(--spacing) * 1.5);
+    --content-padding-bottom: calc(var(--spacing) * 1.5);
+    --content-padding-start: calc(var(--spacing) * 2.5);
+    --content-padding-end: calc(var(--spacing) * 2.5);
+    --content-background-color: var(--color-slate-100);
+    --content-gap:  calc(var(--spacing) * 4);
+
+    /* Chat bubble */
+    --chat-bubble-padding-top: calc(var(--spacing) * 2);
+    --chat-bubble-padding-bottom: calc(var(--spacing) * 2);
+    --chat-bubble-padding-start: calc(var(--spacing) * 3);
+    --chat-bubble-padding-end: calc(var(--spacing) * 3);
+    --chat-bubble-background-color: var(--color-primary-shade);
+    --chat-bubble-color: var(--color-primary-contrast);
+}

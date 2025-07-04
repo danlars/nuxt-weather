@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import "./variables.css";
+@import "./tailwind.css";
+@import "./colors.css";
+
+html,body {
+    font-size: 20px;
+    font-family: Lato, sans-serif;
+    background-color: var(--app-background-color);
+}
+
+h1 {
+    @apply text-6xl font-bold;
+}
+
+h2 {
+    @apply text-5xl font-bold;
+}
+
+h3 {
+    @apply text-4xl font-bold;
+}
+
+h4 {
+    @apply text-3xl;
+}
+
+h5 {
+    @apply text-2xl;
+}
+
+h6 {
+    @apply text-xl;
+}
